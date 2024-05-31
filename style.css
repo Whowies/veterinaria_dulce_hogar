@@ -222,37 +222,57 @@ button[type="submit"]:hover {
 
 
 
-/* Estilos para pantallas pequeñas */
-@media only screen and (max-width: 600px) {
-    header {
-        flex-direction: column; /* Cambiar a dirección de columna para pantallas pequeñas */
-    }
-
+/* Estilos para dispositivos móviles pequeños */
+@media only screen and (max-width: 480px) {
+    /* Ajustes para el header */
     .logo {
-        text-align: center; /* Centrar el logo en pantallas pequeñas */
-        margin-bottom: 20px; /* Añadir espacio entre el logo y la navegación */
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     nav ul {
-        text-align: center; /* Centrar la navegación en pantallas pequeñas */
+        text-align: center;
     }
 
+    /* Ajustes para las secciones */
+    section {
+        padding: 10px;
+    }
+
+    /* Ajustes para las tarjetas de servicio */
     .tarjeta-servicio {
-        flex-direction: column; /* Cambiar a dirección de columna para pantallas pequeñas */
+        flex-direction: column; /* Cambiar a disposición de columna */
     }
 
-    .tarjeta-servicio > div {
-        margin-bottom: 20px; /* Añadir espacio entre las columnas en pantallas pequeñas */
+    .columna-izquierda,
+    .columna-centro,
+    .columna-derecha {
+        padding: 10px;
+    }
+
+    /* Ajustes para el formulario */
+    form label,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 20px); /* Restar el padding del ancho */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+
+    /* Ajustes para el equipo */
+    .miembro-equipo {
+        flex-direction: column; /* Cambiar a disposición de columna */
+    }
+
+    .tarjeta {
+        max-height: none; /* Mostrar todo el contenido sin ocultar */
+    }
+
+    /* Ajustes para el mapa */
+    .mapa {
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
     }
 }
-
-/* Estilos generales */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Otras reglas de estilo... */
