@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #5271ff; /* Cambia el color de fondo de la página */
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
 }
 
 header {
@@ -11,9 +17,11 @@ header {
     text-align: center;
 }
 
-header .logo img {
-    max-width: 50px;
-    vertical-align: middle;
+
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -46,3 +54,205 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo para el contenido */
+}
+
+.container h2{
+    color: black;
+}
+
+
+.logo img {
+    max-width: 120px;
+    vertical-align: middle;
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 15px;
+    
+}
+
+.tarjeta-servicio {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.columna-izquierda,
+.columna-centro,
+.columna-derecha {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.contenedor-ofrecemos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f0f0f0; /* Fondo claro para diferenciar */
+    padding: 20px; /* Añadir un padding para un mejor espaciado */
+    border-radius: 10px; /* Bordes redondeados para un estilo más suave */
+}
+
+.contenedor-ofrecemos .texto, .contenedor-ofrecemos .imagen {
+    width: 50%;
+    padding: 10px;
+}
+
+.contenedor-ofrecemos .texto {
+    margin-right: 0; /* Quitar margen derecho */
+}
+
+.contenedor-ofrecemos .imagen {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor-ofrecemos .imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.miembro-equipo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+#equipo h2{
+    margin-bottom: 20px; /* Espacio bajo el título */
+    text-align: center; /* Centrar el título */
+}
+
+.tarjeta {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    overflow: hidden; /* Oculta el contenido que exceda el alto máximo */
+    transition: max-height 0.3s ease; /* Transición suave */
+    max-height: 120px; /* Altura máxima para el contenido antes del hover */
+}
+
+.tarjeta h3 {
+    margin-top: 0; /* Elimina el margen superior de los títulos */
+}
+
+.tarjeta p {
+    margin-bottom: 10px; /* Espacio entre los párrafos */
+}
+
+.tarjeta:hover {
+    max-height: 1000px; /* Altura máxima para el contenido al pasar el mouse */
+}
+
+#contacto {
+    background-color: #f9f9f9; /* Color de fondo */
+    padding: 40px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#contacto h2 {
+    margin-bottom: 20px; /* Espacio bajo el título */
+    text-align: center; /* Centrar el título */
+    margin-top: -70px;
+}
+
+form {
+    margin-bottom: 20px; /* Espacio bajo el formulario */
+}
+
+form label {
+    display: block; /* Hace que cada etiqueta esté en una nueva línea */
+    margin-bottom: 5px; /* Espacio bajo cada etiqueta */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Elimina el contorno al hacer clic */
+    transition: border-color 0.3s; /* Transición suave para el color del borde */
+}
+
+/* Estilos cuando se enfoca el input */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #5271ff; /* Cambia el color del borde cuando se enfoca */
+}
+
+/* Estilos para el botón */
+button[type="submit"] {
+    background-color: #5271ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e5ad7;
+}
+
+
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column; /* Cambiar a dirección de columna para pantallas pequeñas */
+    }
+
+    .logo {
+        text-align: center; /* Centrar el logo en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadir espacio entre el logo y la navegación */
+    }
+
+    nav ul {
+        text-align: center; /* Centrar la navegación en pantallas pequeñas */
+    }
+
+    .tarjeta-servicio {
+        flex-direction: column; /* Cambiar a dirección de columna para pantallas pequeñas */
+    }
+
+    .tarjeta-servicio > div {
+        margin-bottom: 20px; /* Añadir espacio entre las columnas en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Otras reglas de estilo... */
